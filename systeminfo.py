@@ -4,8 +4,8 @@ get system info
 
 import json, os
 from tkinter.simpledialog import askstring
-user = os.getlogin()
-os.chdir('/home/%s/COMPUTER_SCIENCE/AI' % user)
+# user = os.getlogin()
+# os.chdir('/home/%s/COMPUTER_SCIENCE/AI' % user)
 print("Puoi scegliere fra <sysname>, <nodename>, <release>, <version> e <machine>")
 question = askstring('Entry', "Inserisci l'informazione desiderata")
 info = os.uname()
