@@ -1,0 +1,34 @@
+import dill, os, pickle ###
+import pandas as pd ###
+from tkinter.simpledialog import askinteger, askfloat ###
+
+BasalMetabolicRate_df = BasalMetabolicRate_df.rename(columns={'BasalMetabolicRate_W': 'Basal Metabolic Rate (W)'}) ###
+
+BasalMetabolicRate_df = basal_metabolic_rate['BasalMetabolicRate_W'].to_frame().rename(columns={'BasalMetabolicRate_W': 'Basal Metabolic Rate (W)'}) ###
+
+BasalMetabolicRate_df = pd.read_csv('~/COMPUTER_SCIENCE/AI/DATA/metabolismo_basale.csv')['BasalMetabolicRate_W'].to_frame().rename(columns={'BasalMetabolicRate_W': 'Basal Metabolic Rate (W)'}) ###
+
+BasalMetabolicRate_df_clean = pd.read_csv('~/COMPUTER_SCIENCE/AI/DATA/metabolismo_basale.csv')['BasalMetabolicRate_W'].to_frame().rename(columns={'BasalMetabolicRate_W': 'Basal Metabolic Rate (W)'}).dropna(how='all') ###
+
+BodyMass_df_clean = pd.read_csv('~/COMPUTER_SCIENCE/AI/DATA/metabolismo_basale.csv')['BodyMass_g'].to_frame().rename(columns={'BodyMass_g': 'Body Mass (g)'}).dropna(how='all') ###
+
+MetabolicData = pd.concat([BodyMass_df_clean, BasalMetabolicRate_df_clean], axis=1) ###
+
+os.chdir('COMPUTER_SCIENCE/AI/DATA') ###
+
+MetabolicData.to_csv('MetabolicData.csv', index=False) ###
+
+BodyMass_df_clean.to_csv('BodyMass.csv', index=False) ###
+
+BodyMass_df_clean.count().item() ###
+
+range(BodyMass_df_clean.count().item()) ###
+
+for i in range(BodyMass_df_clean.count().item()):
+	print(i) ###
+	
+BodyMass_ls_clean = pd.read_csv('~/COMPUTER_SCIENCE/AI/DATA/metabolismo_basale.csv') ['BodyMass_g'].to_frame().rename(columns={'BodyMass_g': 'Body Mass (g)'}).dropna(how='all')['Body Mass (g)'].to_list() ###
+
+BodyMass_df_clean['Body Mass (g)'].mean() ###
+
+
