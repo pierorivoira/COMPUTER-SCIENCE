@@ -1,4 +1,4 @@
-# svm2.py
+# iris1.py
 
 import os
 user = os.getlogin()
